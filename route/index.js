@@ -13,7 +13,7 @@ module.exports = function(express, app, models) {
 
 
 	/*------
-	Middleware
+	Routes
 	------------*/
 
 

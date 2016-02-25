@@ -1,4 +1,12 @@
 
+## Usage
+This module seamlessly adds API versioning into your accelerated.api app by returning your ```package.json``` version via response headers. By default, the header name is ```X-Accelerated-API-Version```, but you can override that in your accelerated.api ```env.json```:
+
+```
+"EXPRESS_API_VERSION_HEADER": "Your-API-Version-Header"
+```
+
+
 ## Quick Start
 This repo is an easy-to-use npm template to create modules for accelerated.api. Simply clone this repo and:
 

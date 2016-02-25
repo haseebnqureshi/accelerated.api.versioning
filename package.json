@@ -1,7 +1,7 @@
 {
-  "name": "accelerated.api.module",
+  "name": "accelerated.api.versioning",
   "version": "1.0.0",
-  "description": "Module template for accelerated.api.",
+  "description": "Seamless app versioning via package.json.",
   "main": "index.js",
   "scripts": {
     "test": "npm -v"
@@ -9,14 +9,12 @@
   "author": "Haseeb Qureshi <haseeb.n.qureshi@gmail.com> (http://twitter.com/_hq)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haseebnqureshi/accelerated.api.module.git"
+    "url": "git+https://github.com/haseebnqureshi/accelerated.api.versioning.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haseebnqureshi/accelerated.api.module/issues"
+    "url": "https://github.com/haseebnqureshi/accelerated.api.versioning/issues"
   },
-  "homepage": "https://github.com/haseebnqureshi/accelerated.api.module#readme",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  }
+  "homepage": "https://github.com/haseebnqureshi/accelerated.api.versioning#readme",
+  "dependencies": {}
 }
