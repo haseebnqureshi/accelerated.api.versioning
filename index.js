@@ -1,24 +1,37 @@
 module.exports = (function() {
 
-	var moduleKey = 'versioning';
-	var moduleName = 'Versioning';
+    // you can require this or other modules using accelerated.api.module 
+    var module = require('accelerated.api.module');
+    
+	var path = require('path');
 
-	/* Careful - don't modify below unless you're sure! */
+    // set your module's key for reference by middlwares, models, and routes 
+    module.setKey('versioning');
 
-	var Module = {
+    // set your module's name for logging output 
+    module.setName('Versioning Module');
 
-		key: moduleKey,
+    // you can choose to extend your module's middleware 
+    module.appendMiddleware(function(express, app, models) {
 
-		name: moduleName,
+		app.use('*', function(req, res, next) {
+			
+            var filepath = path.join(process.env.PWD, 'package.json');
+			var packageJSON = require(filepath);
+			var headers = {};
+			
+			headers[process.env.EXPRESS_API_VERSION_HEADER || 'X-Accelerated-API-Version'] = packageJSON.version;
+			res.set(headers);
+			
+			next();
+            
+		});
 
-		middleware: require('./middleware'),
+        // modify app to include user authentication middleware 
+        return app;
 
-		model: require('./model'),
+    });
 
-		route: require('./route')
-	
-	};
-
-	return Module;
+    return module;
 
 })();

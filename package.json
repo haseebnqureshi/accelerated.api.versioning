@@ -1,6 +1,6 @@
 {
   "name": "accelerated.api.versioning",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Seamless app versioning via package.json.",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,7 @@
     "url": "https://github.com/haseebnqureshi/accelerated.api.versioning/issues"
   },
   "homepage": "https://github.com/haseebnqureshi/accelerated.api.versioning#readme",
-  "dependencies": {}
+  "dependencies": {
+    "accelerated.api.module": "^1.1.0"
+  }
 }
