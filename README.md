@@ -12,7 +12,7 @@ Once you include ```accelerated.api.versioning``` into your project dependencies
 
 var api = require('accelerated.api');
 
-var apiVersioning = new require('acceleratd.api.versioning')();
+var apiVersioning = require('acceleratd.api.versioning').use();
 
 api.useMiddlewares([ 
 	[apiVersioning.key, apiVersioning.middleware]
